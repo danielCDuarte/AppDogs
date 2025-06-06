@@ -11,7 +11,6 @@ import SwiftUI
 struct AppDogsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
         }
     }
 }
