@@ -9,6 +9,29 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>AppDogsTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>65EF39602DF34468001DAF06</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>65EF396E2DF3446A001DAF06</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>65EF39782DF3446A001DAF06</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>

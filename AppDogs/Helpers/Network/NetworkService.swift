@@ -63,20 +63,19 @@ class NetworkService {
 }
 
 extension NetworkService: NetworkServiceType {
-    
-    
     func setBaseUrl(_ baseUrl: String) {
         baseURL = URL(string: baseUrl)
     }
     
     func request<Response>(
         _ endpoint: NetworkRequest<Response>,
-        queue: DispatchQueue = .main) async throws -> Response where Response : Decodable {
+        queue: DispatchQueue = .main
+    ) async throws -> Response where Response: Decodable {
         guard let request = getUrlRequest(endpoint) else {
             throw NetworkError.invalidUrl
         }
         
-        let (data, response) = try await URLSession.shared.data(for: request)
+        let (data, response) = try await urlSession.data(for: request)
         
         if let httpResponse = response as? HTTPURLResponse, !(200 ..< 300 ~= httpResponse.statusCode) {
             throw NetworkError.apiError(
@@ -84,17 +83,12 @@ extension NetworkService: NetworkServiceType {
                 error: HTTPURLResponse.localizedString(forStatusCode: httpResponse.statusCode)
             )
         }
-
+        
         do {
             let decodedResponse = try decoder.decode(Response.self, from: data)
-            return try await withCheckedThrowingContinuation { continuation in
-                queue.async {
-                    continuation.resume(returning: decodedResponse)
-                }
-            }
+            return decodedResponse
         } catch {
             throw error
         }
-        
     }
 }

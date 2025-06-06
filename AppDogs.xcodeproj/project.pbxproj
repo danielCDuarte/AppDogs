@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		65EF3B692DF39B3F001DAF06 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 65EF3B682DF39B3F001DAF06 /* Resolver */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		65EF39702DF3446A001DAF06 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65EF3B692DF39B3F001DAF06 /* Resolver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = AppDogs;
 			packageProductDependencies = (
+				65EF3B682DF39B3F001DAF06 /* Resolver */,
 			);
 			productName = AppDogs;
 			productReference = 65EF39612DF34468001DAF06 /* AppDogs.app */;
@@ -178,6 +184,7 @@
 					};
 					65EF396E2DF3446A001DAF06 = {
 						CreatedOnToolsVersion = 16.4;
+						LastSwiftMigration = 1640;
 						TestTargetID = 65EF39602DF34468001DAF06;
 					};
 					65EF39782DF3446A001DAF06 = {
@@ -195,6 +202,9 @@
 			);
 			mainGroup = 65EF39582DF34468001DAF06;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				65EF3B672DF39B3F001DAF06 /* XCRemoteSwiftPackageReference "Resolver" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 65EF39622DF34468001DAF06 /* Products */;
 			projectDirPath = "";
@@ -461,6 +471,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -472,6 +483,7 @@
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppDogs.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AppDogs";
@@ -483,6 +495,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -583,6 +596,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		65EF3B672DF39B3F001DAF06 /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		65EF3B682DF39B3F001DAF06 /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 65EF3B672DF39B3F001DAF06 /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 65EF39592DF34468001DAF06 /* Project object */;
 }
