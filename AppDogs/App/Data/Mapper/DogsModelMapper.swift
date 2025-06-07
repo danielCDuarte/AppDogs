@@ -21,6 +21,7 @@ struct DogsModelMapper: MapperType {
         return .init(
             id: input.id,
             name: input.name,
+            desc: input.desc,
             age: input.age,
             image: input.image
         )

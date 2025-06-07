@@ -21,6 +21,7 @@ struct DogsMapper: MapperType {
         return .init(
             id: UUID(),
             name: input.name,
+            desc: input.description,
             age: input.age,
             image: input.image
         )

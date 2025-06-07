@@ -10,6 +10,7 @@ import Foundation
 struct DogObject: Identifiable {
     let id: UUID
     var name: String
+    var desc: String
     var age: Int
     var image: String
 }
