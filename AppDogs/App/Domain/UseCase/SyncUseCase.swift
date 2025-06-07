@@ -31,10 +31,14 @@ class SyncUseCase: AnyUseCase< Any?, [DogObject]> {
                 try await saveDogModelUseCase.execute(params: dog)
             }
             userDefaults.set(true, forKey: "hasLaunchedBefore")
-            return dogs
+            return sortDogsByName(dogs)
         } else {
             let dogs = try await fetchDogsModelUseCase.execute(params: params)
-            return dogs
+            return sortDogsByName(dogs)
         }
+    }
+    
+    private func sortDogsByName(_ dogs: [DogObject]) -> [DogObject] {
+        return dogs.sorted { $0.name < $1.name }
     }
 }

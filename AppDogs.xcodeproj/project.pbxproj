@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		65EF3B692DF39B3F001DAF06 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 65EF3B682DF39B3F001DAF06 /* Resolver */; };
+		65EF3BCC2DF3E1DA001DAF06 /* SkeletonUI in Frameworks */ = {isa = PBXBuildFile; productRef = 65EF3BCB2DF3E1DA001DAF06 /* SkeletonUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65EF3B692DF39B3F001DAF06 /* Resolver in Frameworks */,
+				65EF3BCC2DF3E1DA001DAF06 /* SkeletonUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +120,7 @@
 			name = AppDogs;
 			packageProductDependencies = (
 				65EF3B682DF39B3F001DAF06 /* Resolver */,
+				65EF3BCB2DF3E1DA001DAF06 /* SkeletonUI */,
 			);
 			productName = AppDogs;
 			productReference = 65EF39612DF34468001DAF06 /* AppDogs.app */;
@@ -204,6 +207,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				65EF3B672DF39B3F001DAF06 /* XCRemoteSwiftPackageReference "Resolver" */,
+				65EF3BCA2DF3E1DA001DAF06 /* XCRemoteSwiftPackageReference "SkeletonUI" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 65EF39622DF34468001DAF06 /* Products */;
@@ -606,6 +610,14 @@
 				minimumVersion = 1.5.1;
 			};
 		};
+		65EF3BCA2DF3E1DA001DAF06 /* XCRemoteSwiftPackageReference "SkeletonUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CSolanaM/SkeletonUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -613,6 +625,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 65EF3B672DF39B3F001DAF06 /* XCRemoteSwiftPackageReference "Resolver" */;
 			productName = Resolver;
+		};
+		65EF3BCB2DF3E1DA001DAF06 /* SkeletonUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 65EF3BCA2DF3E1DA001DAF06 /* XCRemoteSwiftPackageReference "SkeletonUI" */;
+			productName = SkeletonUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

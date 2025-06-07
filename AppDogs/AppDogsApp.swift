@@ -9,8 +9,10 @@ import SwiftUI
 
 @main
 struct AppDogsApp: App {
+    let factory = Factory(baseUrl: DataConstants.baseUrl)
     var body: some Scene {
         WindowGroup {
+            SearchDogsView<SearchDogsViewModel>()
         }
     }
 }

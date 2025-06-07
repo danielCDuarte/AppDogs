@@ -19,5 +19,5 @@ struct DataConstants {
         static let getDogs: String = "1151549092634943488"
     }
     
-    static let baseUrl: String = "https://pokeapi.co/api/v2/pokemon/"
+    static let baseUrl: String = "https://jsonblob.com/api/"
 }
